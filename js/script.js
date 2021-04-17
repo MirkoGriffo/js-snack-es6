@@ -80,3 +80,26 @@ console.log(nuovoArray);
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
+
+
+/* Snack 3 
+
+Si scriva una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri
+inseriti dall'utente (è possibile usare, ad esempio, for/foreach/filter
+
+*/
+
+let numMin = parseInt(prompt("inseire numero minimo"));
+let numMax = parseInt(prompt("inseire numero massimo"));
+const array = ["Paolo", "Fabio", "Lorenzo", "Mirko"];
+const array2 = [];
+
+array.forEach((element, index) => {
+    if (index >= numMin && index <= numMax) {
+        array2.push(element);
+    };
+});
+console.log(array2);
+
+

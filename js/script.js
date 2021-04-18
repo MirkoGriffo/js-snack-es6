@@ -103,3 +103,45 @@ array.forEach((element, index) => {
 console.log(array2);
 
 
+/* Snack 4
+
+Dato un'array con dei capi d'abbigliamento 
+- oggetti che contengono informazioni su nome modello, tipologia e colore - 
+si aggiunga a ciascun elemento una ulteriore proprietà che indichi il costo del prodotto.
+Per inserire il costo del singolo prodotto si scriva una funzione che generi un numero random da 10 a 50 (potete sfruttare il map per aggiungere la nuova proprietà)
+
+*/
+
+const vestiti = [
+    {
+        nome: "maglia",
+        tipo: "tipo1",
+        colore: "giallo"
+    },
+    {
+
+        nome: "pantaloni",
+        tipo: "tipo2",
+        colore: "nero"
+
+    },
+    {
+
+        nome: "gonna",
+        tipo: "tipo3",
+        colore: "verde"
+
+    }
+]
+
+vestiti.forEach((element) => {
+
+    element.prezzo = random(10, 50);
+});
+
+console.log(vestiti);
+
+// Funzione
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
